@@ -1,0 +1,38 @@
+{
+  "name": "naver-translate-cli",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "papago",
+    "naver",
+    "korean",
+    "translate",
+    "dict",
+    "cli"
+  ],
+  "homepage": "https://github.com/pepebecker/naver-translate-cli#readme",
+  "bugs": {
+    "url": "https://github.com/pepebecker/naver-translate-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pepebecker/naver-translate-cli.git"
+  },
+  "bin": {
+    "navert": "index.js",
+    "네이버": "index.js",
+    "사전": "index.js"
+  },
+  "license": "ISC",
+  "author": "Pepe Becker <mail@pepebecker.com> (https://pepe.asia)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "meow": "^10.1.3",
+    "naver-translate": "github:pepebecker/naver-translate",
+    "readline": "^1.3.0"
+  }
+}

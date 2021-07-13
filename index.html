@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naver Translate CLI</title>
+    <style>
+      body {
+        background: #242943;
+        color: white;
+      }
+      a {
+        color: white;
+      }
+      pre {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        padding: 0.5em 0.7em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      fetch('./README.md')
+        .then((res) => res.text())
+        .then((md) => {
+          document.getElementById('content').innerHTML = marked(md);
+        })
+        .catch((error) => {
+          document.getElementById('content').innerHTML = error;
+        });
+    </script>
+  </body>
+</html>
